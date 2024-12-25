@@ -1,0 +1,8 @@
+@use './colors' as *;
+
+// Responsive Design Parameters
+$mobile_max_width: 767px;
+$tablet_min_width: 768px;
+$tablet_max_width: 1279px;
+
+$button-offset-border: 2px solid $Graphite;

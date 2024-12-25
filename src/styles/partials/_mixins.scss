@@ -1,0 +1,72 @@
+@use './colors' as *;
+@use './fonts' as *;
+@use './variables' as *;
+
+// Media Queries
+@mixin mobile {
+  @media (max-width: $mobile_max_width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet_min_width) and (max-width: $tablet_max_width) {
+    @content;
+  }
+}
+
+// Typography
+@mixin header-font {
+  font-family: Open-Sans-Light;
+  font-size: 33px;
+}
+
+@mixin subheader_font {
+  font-family: Open-Sans-Light;
+  font-size: 33px;
+}
+
+@mixin nav-link-font {
+  font-family: Open-Sans-Regular;
+  font-size: 21px;
+}
+
+@mixin paragraph-font {
+  font-family: Open-Sans-Regular;
+  font-size: 18px;
+}
+
+@mixin paragraph-italic-font {
+  font-family: Open-Sans-Italic;
+  font-size: 18px;
+}
+
+@mixin discount-text-font {
+  font-family: Open-Sans-Bold;
+  font-size: 45px;
+}
+
+// Components
+@mixin buttons {
+  background-color: $Nitro-Blue;
+  cursor: pointer;
+
+  width: 11.25rem;
+  padding: 1.25rem;
+  margin: 1.25rem;
+
+  font-family: Open-Sans-Regular;
+  font-size: 21px;
+  color: $White;
+}
+
+@mixin product-cards {
+  width: 20.625px;
+  height: 27.5px;
+
+  padding: 1.25rem;
+  margin: 1.25rem;
+
+  border-radius: 10px;
+  box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
+}
