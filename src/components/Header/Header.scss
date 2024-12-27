@@ -1,0 +1,49 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header{
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+
+    &__image {
+      width: 3.125rem;
+    }
+
+    &__title {
+      @include subheader_font;
+      color: $Graphite;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__nav {
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__links {
+      @include nav-link-font;
+      text-decoration: none;
+      color: $Graphite;
+
+      &--shop-now {
+        @extend .header__nav__links;
+        color: $Nitro-Blue;
+      }
+    }
+  }
+}

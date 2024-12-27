@@ -1,5 +1,7 @@
+@use './styles/partials/colors' as *;
 @use './styles/partials/mixins' as *;
 
 body {
   @include paragraph-font;
+  background-color: $Nitro-Pink;
 }
