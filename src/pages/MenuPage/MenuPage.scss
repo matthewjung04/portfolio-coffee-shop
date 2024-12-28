@@ -3,6 +3,10 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
+#Cold\ Drinks {
+  background-color: $Light-Gray;
+}
+
 .menu {
   &__hero {
     background-image: url('../../assets/images/coffee-circle.jpg');
@@ -60,6 +64,46 @@
       align-self: center;
       padding: 0 1.5rem;
       border-left: $offset-border;
+
+    }
+  }
+
+  &__items {
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      @include header-font;
+      margin: 0;
+      margin: 1.25rem 0;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__name {
+        @include subheader_font;
+        margin: 0;
+        margin-top: 1.25rem;
+      }
+
+      &__desc {
+        @include paragraph-italic-font;
+        text-align: center;
+
+        width: 55%;
+        margin: 0;
+        margin: 0.5rem 0;
+      }
+
+      &__price {
+        margin: 0;
+        color: $Nitro-Blue;
+      }
 
     }
   }
