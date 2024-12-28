@@ -1,0 +1,46 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.menu {
+  &__hero {
+    background-image: url('../../assets/images/coffee-circle.jpg');
+    background-position: center;
+    background-size: cover;
+
+    height: 36rem;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      &__text {
+        @include header-font;
+        color: $White;
+        background-color: $Graphite;
+
+        margin: 0;
+        padding: 3.703rem 0;
+        width: 18.75rem;
+   
+        text-align: center;
+      }
+
+      &__frame {
+        margin: 0;
+        border: $offset-border;
+
+        height: 12.188rem;
+        width: 18.438rem;
+
+        position: absolute;
+        top: 16.75rem;
+        left: 34.25rem;
+      }
+    }
+  }
+}

@@ -4,4 +4,6 @@
 body {
   @include paragraph-font;
   background-color: $Nitro-Pink;
+  padding: 0;
+  margin: 0;
 }
