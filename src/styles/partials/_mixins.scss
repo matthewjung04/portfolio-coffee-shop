@@ -50,14 +50,25 @@
 @mixin buttons {
   background-color: $Nitro-Blue;
   cursor: pointer;
+  width: 10.75rem;
+  height: 3.5rem;
 
-  width: 11.25rem;
-  padding: 1.25rem;
-  margin: 1.25rem;
+  border: none;
+  position: relative;
+  left: 0.625rem;
+}
 
-  font-family: Open-Sans-Regular;
-  font-size: 21px;
+@mixin button-frames {
+  @include nav-link-font;
   color: $White;
+
+  position: relative;
+  top: -0.5rem;
+  left: -0.75rem;
+
+  width: 8.75rem;
+  padding: 0.8rem 0.9rem;
+  border: $button-offset-border;
 }
 
 @mixin product-cards {

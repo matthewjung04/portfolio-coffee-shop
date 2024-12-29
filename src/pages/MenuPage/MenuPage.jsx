@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { menuItems } from '../../utils/utils'
 import './MenuPage.scss'
 
@@ -12,14 +11,14 @@ function MenuPage() {
         </div>
       </article>
       <article className='menu__nav'>
-        <Link className='menu__nav__links'>HOT DRINKS</Link>
-        <Link className='menu__nav__links'>COLD DRINKS</Link>
-        <Link className='menu__nav__links'>PASTERIES</Link>
+        <a href='#Hot Drinks' className='menu__nav__links'>HOT DRINKS</a>
+        <a href='#Cold Drinks' className='menu__nav__links'>COLD DRINKS</a>
+        <a href='#Pasteries' className='menu__nav__links'>PASTERIES</a>
       </article>
       <article>
         {
           menuItems.map((menu) => (
-            <div id={menu.type} className='menu__items'>
+            <div key={menu.type} id={menu.type} className='menu__items'>
               <h1 className='menu__items__title'>{menu.type}</h1>
               <div className='menu__items__block'>
                 <h2 className='menu__items__block__name'>{menu.items[0].name}</h2>
