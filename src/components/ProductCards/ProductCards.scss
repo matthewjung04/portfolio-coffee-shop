@@ -1,0 +1,59 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.product-card {
+  background-color: $White;
+  width: 20.5rem;
+  height: 30rem;
+
+  padding-top: 1.5rem;
+  margin: 1.25rem;
+
+  border-radius: 10px;
+  box-shadow: 0 5px 9px -1px rgba(0,0,0,0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__image {
+    align-self: center;
+    height: 18rem;
+  }
+
+  &__caption {
+    background-color: $Nitro-Pink;
+
+    padding: 2.5rem 1.25rem;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__details {
+
+      &__name {
+        margin: 0;
+      
+        @include subheader_font;
+      }
+
+      &__desc {
+        margin: 0;
+        color: $Gray;
+      }
+    }
+
+    &__price {
+      color: $Nitro-Blue;
+      @include paragraph-bold-font;
+
+      margin: 0;
+      align-self: center;
+    }
+  }
+}

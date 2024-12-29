@@ -8,11 +8,8 @@ import tiltedCanBackground from '../../assets/images/coldbrewbackground.png'
 import coffeeBeanIcon from '../../assets/logos/coffee-beans.svg'
 import coffeeCupIcon from '../../assets/logos/coffee-cup.svg'
 import plantsIcon from '../../assets/logos/planting.svg'
-import coffeeBeanBackground from '../../assets/logos/coffee-beans-logo-and-footer.svg'
-import facebookIcon from '../../assets/logos/Facebook-Icon.svg'
-import instagramIcon from '../../assets/logos/Instagram-Icon.svg'
-import yelpIcon from '../../assets/logos/Yelp-Icon.svg'
-
+import ProductCards from '../../components/ProductCards/ProductCards'
+import Footer from '../../components/Footer/Footer'
 import './HomePage.scss'
 
 function HomePage() {
@@ -33,25 +30,41 @@ function HomePage() {
         </div>
         <img src={coffeeBeanHero} alt='coffee-bean-hero' className='homepage__hero__image'/>
       </article>
-      <article className='homepage__products'>
 
+      <article className='homepage__products'>
+        <h1 className='homepage__products__title'>Our Products</h1>
+        <div className='homepage__products__cards'>
+          <ProductCards 
+            photo={coffeeBean}
+            name={'Coffee Beans'}
+            caption={'Pack of 3'}
+            price={'$19'}
+          />
+          <ProductCards
+            photo={coldBrew}
+            name={'Cold Brew'}
+            caption={'1 can'}
+            price={'$5'}
+          />
+          <ProductCards
+            photo={inHouseBrew}
+            name={'In-house Brew'}
+            caption={'1 cup'}
+            price={'$3'}
+          />
+        </div>
+        <Link to='/menu' className='homepage__products__link'>
+          <button className='homepage__products__link--button'>
+            <div className='homepage__products__link--frame'>VIEW ALL</div>
+          </button>
+        </Link>
       </article>
+
       <article className='homepage__details'>
         <div className='homepage__details__about'>
 
         </div>
         <div className='homepage__details__discount'>
-
-        </div>
-      </article>
-      <article className='homepage__footer'>
-        <div className='homepage__footer__address'>
-
-        </div>
-        <div className='homepage__footer__hours'>
-
-        </div>
-        <div className='homepage__footer__social'>
 
         </div>
       </article>
