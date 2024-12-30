@@ -89,6 +89,8 @@ function HomePage() {
           <span className='homepage__discount__bold'> FirstNitro</span>
         </h1>
       </article>
+
+      <Footer />
     </section>
   )
 }

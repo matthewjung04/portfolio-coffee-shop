@@ -56,6 +56,11 @@
   font-size: 45px;
 }
 
+@mixin footer-bold-font {
+  font-family: Open-Sans-Bold;
+  font-size: 18px;
+}
+
 // Components
 @mixin buttons {
   background-color: $Nitro-Blue;

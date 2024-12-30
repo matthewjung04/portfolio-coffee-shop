@@ -2,3 +2,82 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+
+  padding: 3.5rem 0;
+
+  &__background {
+    &--top {
+      width: 7.5rem;
+      opacity: 25%;
+
+      position: relative;
+      top: -3rem;
+      left: -2.125rem;
+    }
+
+    &--bottom {
+      width: 7.5rem;
+      opacity: 25%;
+
+      position: relative;
+      bottom: -3rem;
+      right: -2.125rem;
+    }
+  }
+
+  &__blocks {
+    width: 100%;
+    padding: 0 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__address {
+      &__title {
+        @include subheader-font;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+
+      &__desc {
+        margin: 0;
+      }
+    }
+
+    &__hours {
+      &__title {
+        @extend .footer__blocks__address__title;
+      }
+
+      &__desc {
+        margin: 0;
+
+        &--bold {
+          @include footer-bold-font;
+        }
+
+      }
+    }
+
+    &__social {
+      &__title {
+        @extend .footer__blocks__address__title;
+      }
+
+      &__icons {
+        width: 10vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__images {
+          width: 2.75rem;
+        }
+      }
+    }
+  }
+}
