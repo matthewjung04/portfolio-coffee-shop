@@ -3,6 +3,24 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes color-change {
+  50% {
+      background-color: $Nitro-Blue; 
+  }
+  100% {
+      background-color: $Graphite;
+  }
+}
+
 .homepage {
   &__hero {
     display: flex;
@@ -95,6 +113,125 @@
           transform: $button-animation;
         }
       }
+    }
+  }
+
+  &__details {
+    background-color: $White;
+    padding-bottom: 3.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    &__about{
+      width: 35%;
+      padding-top: 1rem;
+
+      &__title {
+        @include header-font;
+        margin: 0;
+        margin-bottom: 1.25rem;
+      }
+
+      &__desc {
+        width: 90%;
+        margin: 0;
+      }
+
+      &__icons {
+        margin: 2rem 0 2.5rem 0;
+        width: 90%;
+
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__image {
+          width: 3.125rem;
+        }
+      }
+
+      &__link {
+        width: $button-width;
+  
+        &--button {
+          @include buttons;
+  
+          &:active .homepage__products__link--frame {
+            transform: $button-animation;
+          }
+        }
+  
+        &--frame {
+          @include button-frames;
+  
+          &:active {
+            transform: $button-animation;
+          }
+        }
+      }
+    }
+
+    &__tilted-can {
+      background-image: url('../../assets/images/coldbrewbackground.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      
+      width: 25rem;
+      margin-top: 8rem;
+
+      &:hover .homepage__details__tilted-can--image {
+        animation: rotation 2s infinite linear;
+      }
+      
+      &--image {
+        width: 10rem;
+        margin-top: 3.5rem;
+        margin-left: 6.25rem;
+        position: absolute;
+      }
+
+      &--frame {
+        width: 24.5rem;
+        height: 24.5rem;
+        border: $offset-border;
+
+        position: relative;
+        top: -1.25rem;
+        left: -1.25rem;
+      }
+    }
+  }
+
+  &__discount {
+    background-color: $White;
+    padding: 3rem 0 6.25rem 0;
+
+    display: flex;
+    justify-content: center;
+
+    &__regular {
+      @include discount-regular-font;
+      color: $White;
+      background-color: $Graphite;
+
+      width: 80%;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+
+      &:hover {
+        animation: color-change 2.5s infinite;
+      }
+    }
+
+    &__bold {
+      @include discount-bold-font;
+      color: $White;
     }
   }
 }

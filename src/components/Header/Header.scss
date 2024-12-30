@@ -22,7 +22,7 @@
     }
 
     &__title {
-      @include subheader_font;
+      @include subheader-font;
       color: $Graphite;
       margin: 0;
       padding: 0;

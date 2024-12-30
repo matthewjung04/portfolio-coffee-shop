@@ -86,7 +86,7 @@
       align-items: center;
 
       &__name {
-        @include subheader_font;
+        @include subheader-font;
         margin: 0;
         margin-top: 1.25rem;
       }

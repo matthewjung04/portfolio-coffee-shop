@@ -21,7 +21,7 @@
   font-size: 60px;
 }
 
-@mixin subheader_font {
+@mixin subheader-font {
   font-family: Open-Sans-Light;
   font-size: 33px;
 }
@@ -46,7 +46,12 @@
   font-size: 33px;
 }
 
-@mixin discount-text-font {
+@mixin discount-regular-font {
+  font-family: Open-Sans-Regular;
+  font-size: 45px;
+}
+
+@mixin discount-bold-font {
   font-family: Open-Sans-Bold;
   font-size: 45px;
 }
